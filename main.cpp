@@ -75,9 +75,9 @@ void variableDeclarations()
     bool sleptEightHours = false;
     bool brushedTeeth = true;
 
-    char myEye = 'eye';
-    char myEar = 'ear';
-    char myNose = 'nose';
+    char breakfast = 'b';
+    char lunch = 'l';
+    char dinner = 'd';
 
     double pie = 3.14159;
     double wingspan = 3.5425;
@@ -87,7 +87,7 @@ void variableDeclarations()
     unsigned int customerRating = 10;
     unsigned int numberOfBones = 206;
     
-    ignoreUnused(number, volume, speed, damageDealt, probability, tablespoonsOfSalt, hoursWorked, ateBreakfast, sleptEightHours, brushedTeeth, myEar, myEye, myNose, pie, wingspan, poundsOfForce, height, customerRating, numberOfBones); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, volume, speed, damageDealt, probability, tablespoonsOfSalt, hoursWorked, ateBreakfast, sleptEightHours, brushedTeeth, breakfast, lunch, dinner, pie, wingspan, poundsOfForce, height, customerRating, numberOfBones); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -113,7 +113,7 @@ int adjustVolume(bool canHear, unsigned int presentVolume, unsigned int audibleV
 /*
  2)
  */
-void speak(bool questionAsked, float extroversion)
+void speak(bool questionAsked, double extroversion)
 {
     ignoreUnused(questionAsked, extroversion);
 }
