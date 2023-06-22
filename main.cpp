@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ int
+ float
+ unsigned int
+ bool
+ char
+ double 
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -64,10 +62,32 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
 
+    int volume = 5;
+    int speed = 75;
+    int damageDealt = -18;
+
+    float probability = 0.f;
+    float tablespoonsOfSalt = 1.5f;
+    float hoursWorked = 8.24f;
+
+    bool ateBreakfast = true;
+    bool sleptEightHours = false;
+    bool brushedTeeth = true;
+
+    char breakfast = 'b';
+    char lunch = 'l';
+    char dinner = 'd';
+
+    double pie = 3.14159;
+    double wingspan = 3.5425;
+    double poundsOfForce = 104.4314;
+
+    unsigned int height = 72;
+    unsigned int customerRating = 10;
+    unsigned int numberOfBones = 206;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, volume, speed, damageDealt, probability, tablespoonsOfSalt, hoursWorked, ateBreakfast, sleptEightHours, brushedTeeth, breakfast, lunch, dinner, pie, wingspan, poundsOfForce, height, customerRating, numberOfBones); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,43 +104,83 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+int adjustVolume(bool canHear, unsigned int presentVolume, unsigned int audibleVolume = 5)
+{
+    ignoreUnused(canHear, presentVolume, audibleVolume);
 
+    return {};
+}
 /*
  2)
  */
-
+void speak(bool questionAsked, double extroversion)
+{
+    ignoreUnused(questionAsked, extroversion);
+}
 /*
  3)
  */
+int minutesLeftToBake(int minutesInOven, int foodBeingBaked = 0)
+{
+    ignoreUnused(minutesInOven, foodBeingBaked);
 
+    return {};
+}
 /*
  4)
  */
+bool floodZone(double distanceToCoast, double elevation)
+{
+    ignoreUnused(distanceToCoast, elevation);
 
+    return {};
+}
 /*
  5)
  */
-
+void pickupSelection(int switchType, int switchPosition = 0)
+{
+    ignoreUnused(switchType, switchPosition);
+}
 /*
  6)
  */
+float gripStrength(bool canCarry, bool awkwardToCarry, float objectWeight)
+{
+    ignoreUnused(canCarry, awkwardToCarry, objectWeight);
 
+    return {};
+}
 /*
  7)
  */
+bool sweetTooth(int daysWithoutSugar, int cravingScale)
+{
+    ignoreUnused(daysWithoutSugar, cravingScale);
 
+    return {};
+}
 /*
  8)
  */
-
+void colorBlindness(unsigned int colorsViewed, unsigned int colorsSeen)
+{
+    ignoreUnused(colorsViewed, colorsSeen);
+}
 /*
  9)
  */
-
+void flexibility(int typeOfStretch = 0, unsigned int levelOfDifficulty = 0)
+{
+    ignoreUnused(typeOfStretch, levelOfDifficulty);
+}
 /*
  10)
  */
-
+void walkTheDog(unsigned int hoursSinceLastWalk, int dogBreed = 0) 
+{
+    ignoreUnused(hoursSinceLastWalk, dogBreed);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +201,32 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto turnVolumeUp = adjustVolume(false, 2);
     //2)
-    
+    speak(true, 0.98);
+    //person.speak();
     //3)
-    
+    auto whenToRemove = minutesLeftToBake(20, 3);
     //4)
-    
+    auto isAFloodZone = floodZone(47309.82737, 12.99993);
     //5)
-    
+    pickupSelection(1, 4);
+    //guitar.pickupSelection();
     //6)
-    
+    auto hoistingAbility = gripStrength(true, true, 38.5);
     //7)
-    
+    auto dietDiscipline = sweetTooth(2, 10);
     //8)
-    
+    colorBlindness(25, 25);
+    //person.colorBlindness();
     //9)
-    
+    flexibility(0, 5);
+    //person.flexibility();
     //10)
+    walkTheDog(5, 47);
+    //person.walkTheDog();
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, turnVolumeUp, whenToRemove, isAFloodZone, hoistingAbility, dietDiscipline);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
